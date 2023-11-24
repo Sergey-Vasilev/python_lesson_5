@@ -28,15 +28,15 @@ def test_registration_form():
     browser.all("tbody tr td:last-child").should(
         have.exact_texts(
             'Test Test'
-            and 'Test@test.com'
-            and 'Male'
-            and '89999999999'
-            and '11 November,1991'
-            and 'Chemistry'
-            and 'Sports'
-            and 'python_lesson_5.png'
-            and 'Test,Test,13'
-            and 'NCR Delhi'
+            'Test@test.com'
+            'Male'
+            '89999999999'
+            '11 November,1991'
+            'Chemistry'
+            'Sports'
+            'python_lesson_5.png'
+            'Test,Test,13'
+            'NCR Delhi'
         )
     )
 
