@@ -18,7 +18,7 @@ def test_registration_form():
     browser.element("[for='hobbies-checkbox-1']").click()
     #   browser.driver.save_screenshot('./python_lesson_5.png')
     browser.element('#uploadPicture').send_keys(
-        os.path.abspath('/tests/screenshot/python_lesson_5.png')
+        os.path.abspath('screenshot/python_lesson_5.png')
     )
     browser.element('#currentAddress').type('Test, Test, 13')
     browser.element('#react-select-3-input').type('NCR').press_enter()
