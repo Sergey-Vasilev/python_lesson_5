@@ -18,17 +18,15 @@ def test_registration_form():
     browser.element("[for='hobbies-checkbox-1']").click()
     #   browser.driver.save_screenshot('./python_lesson_5.png')
     browser.element('#uploadPicture').send_keys(
-        os.path.abspath(
-            '/Users/sergeyvasilev/PycharmProjects/python_lesson_5/tests/python_lesson_5.png'
-        )
+        os.path.abspath('/tests/screenshot/python_lesson_5.png')
     )
     browser.element('#currentAddress').type('Test, Test, 13')
     browser.element('#react-select-3-input').type('NCR').press_enter()
     browser.element('#react-select-4-input').type('Delhi').press_enter()
     browser.element('#submit').press_enter()
     browser.element('.modal-header').should(have.text('Thanks for submitting the form'))
-    browser.element('.table').should(
-        have.text(
+    browser.all("tbody tr td:last-child").should(
+        have.exact_texts(
             'Test Test'
             and 'Test@test.com'
             and 'Male'
